@@ -13,12 +13,15 @@ function DetailPage(props) {
             console.log(props)
             const result =await axios.get(`https://aveosoft-react-assignment.herokuapp.com/products/${props.match.params.id}`)
              console.log(result);
+             console.log(result);
+             console.log("dixit");
+          
                if(result){
                     setFormData(result.data); 
                     setLoading(false)   
             }
         }
-          getdata();
+         getdata();
             return()=>{
                 mounted=false;
             }
@@ -28,7 +31,7 @@ function DetailPage(props) {
 
         if(loading){
         return (
-            <div style={{ textAlign: 'center' }}>
+          <div style={{ textAlign: 'center' }}>
               <CircularProgress size={55} />
             </div>
           );
@@ -40,26 +43,22 @@ function DetailPage(props) {
                     <Grid container>
                         <Grid container item sm={12}>
                             <>
-                                <Grid item sm={4}>
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQlLIftekhJmrq6YtvS0Dvodv4NdEt1xX04Ew&usqp=CAU" />
+                            <Grid item sm={4}>
+                              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQlLIftekhJmrq6YtvS0Dvodv4NdEt1xX04Ew&usqp=CAU" />
                             </Grid>
                             <Grid item sm={6}>
                                  <Typography variant="h6">
-                                  Name: {Setfrom.name}
+                                    Name: {Setfrom.name}
                                  </Typography>  
                                  <Typography variant="h6">
-                                 price:{Setfrom.price} 
+                                   price:{Setfrom.price} 
                                  </Typography>  
                                  <Typography variant="h6" >
-                                  description:{Setfrom.description} 
+                                   sdndescription:{Setfrom.description} 
                                  </Typography>   
                             </Grid>
                             </>
-                        
-                           
                         </Grid>
-                        
-        
                     </Grid>
                 </Container>
             </div>
