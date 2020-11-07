@@ -13,6 +13,7 @@ function DetailPage(props) {
             console.log(props)
             const result =await axios.get(`https://aveosoft-react-assignment.herokuapp.com/products/${props.match.params.id}`)
              console.log(result);
+          
                if(result){
                     setFormData(result.data); 
                     setLoading(false)   
@@ -40,8 +41,8 @@ function DetailPage(props) {
                     <Grid container>
                         <Grid container item sm={12}>
                             <>
-                                <Grid item sm={4}>
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQlLIftekhJmrq6YtvS0Dvodv4NdEt1xX04Ew&usqp=CAU" />
+                            <Grid item sm={4}>
+                              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQlLIftekhJmrq6YtvS0Dvodv4NdEt1xX04Ew&usqp=CAU" />
                             </Grid>
                             <Grid item sm={6}>
                                  <Typography variant="h6">
@@ -55,11 +56,7 @@ function DetailPage(props) {
                                  </Typography>   
                             </Grid>
                             </>
-                        
-                           
                         </Grid>
-                        
-        
                     </Grid>
                 </Container>
             </div>
