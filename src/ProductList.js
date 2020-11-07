@@ -109,13 +109,13 @@ function ProductList(props) {
                                 </CardMedia>
                                 <CardContent>
                                 <Typography gutterBottom variant="h5" component="h2">
-                                 {value.name}
+                                  {value.name}
                                 </Typography>
                                 <Typography gutterBottom variant="h5" component="h2">
-                                {value.model} 
+                                  {value.model} 
                                 </Typography>
                                 <Typography gutterBottom variant="h5" component="h2">
-                                {value.price}  
+                                   {value.price}  
                                 </Typography>
                             </CardContent>
                             </CardActionArea>
